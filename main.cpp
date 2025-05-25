@@ -58,6 +58,23 @@ void pop(Nodo* &cabeza) {   //prueba para modificar el puntero cabeza
     cout << "Nodo eliminado." << endl;
     }
 
+//PASO 5
+/**
+ * @brief Motodo mostrar
+ * @details Muestra los nodos de la pila desde el más reciente hasta el más antiguo.
+ */
+void mostrarNodos( Nodo* cabeza) {
+    Nodo* actual = cabeza;
+    if (actual == nullptr) {
+        cout << "La pila está vacía." << endl;
+        return;    
+    }
+    cout << "Contenido de la pila: ";
+    while (actual != nullptr) {
+        cout << actual->dato << " ";
+        actual = actual->siguiente;
+    }
+}
 
  class Lista {
     private:
