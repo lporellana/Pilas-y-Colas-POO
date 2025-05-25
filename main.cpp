@@ -2,7 +2,7 @@
 
 using namespace std;
 
-// PARTE A
+// PASO 1
 /**
  * @brief Clase Nodo
  * @param dato para guardar el valor del nodo
@@ -21,12 +21,36 @@ class Nodo {
     }
 };
 
-//PARTE B
+//PASO 2 
 /**
- * @brief Clase Lista
- * @details Esta clase representa una lista enlazada simple.
+ * @brief Clase Pila
+ * @details Crea el puntero de tipo nodo llamado cabeza.
  */
-class Lista {
+
+class Pila{
+    private:
+    Nodo* cabeza; 
+
+    Pila(){
+        cabeza = nullptr;
+    }
+//PASO 3
+void push(int valor){
+    Nodo* nuevoNodo = new Nodo(valor);
+    nuevoNodo->siguiente = cabeza;
+    cabeza = nuevoNodo;
+    }
+};
+
+//PASO 
+/**
+ * @brief Clase Pila
+ * @details Crea el puntero de tipo nodo llamado cabeza.
+ */
+
+
+
+ class Lista {
     private:
     Nodo* cabeza;
 
