@@ -42,12 +42,21 @@ void push(int valor){
     }
 };
 
-//PASO 
+//PASO 4
 /**
- * @brief Clase Pila
- * @details Crea el puntero de tipo nodo llamado cabeza.
+ * @brief Metodo pop
+ * @details Verificará si la pila está vacía y eliminará el nodo de la parte superior.
  */
-
+void pop(Nodo* &cabeza) {   //prueba para modificar el puntero cabeza
+    if (cabeza== nullptr) {
+        cout << "La pila está vacía. No se puede eliminar un nodo." << endl;
+        return;
+    }
+    Nodo* nodoAEliminar = cabeza;
+    cabeza = cabeza->siguiente;
+    delete nodoAEliminar;
+    cout << "Nodo eliminado." << endl;
+    }
 
 
  class Lista {
