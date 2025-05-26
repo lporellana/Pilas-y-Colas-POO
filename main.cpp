@@ -76,6 +76,37 @@ void mostrarNodos() {
         }
     }
 };
+//CONSTRUIR UNA CLASE COLA
+//PASO 1 : Reutilizar la clase nodo
+
+//PASO 2 : Crear la clase Cola
+class Cola{
+    public:
+    Nodo* frente;
+    Nodo* final;
+
+    Cola(){
+        frente = nullptr;
+        final = nullptr;
+    }
+
+//PASO 3 : Crear el método push
+void push(int valor){
+    Nodo* nuevoNodo = new Nodo(valor);
+    if (final == nullptr) {
+        frente = nuevoNodo;
+        final = nuevoNodo;
+    } else {
+        final->siguiente = nuevoNodo;
+        final = nuevoNodo;  
+        }
+    }
+};
+
+//PASO 4 : Crear el método pop
+void pop(){
+    
+}
 
 //PASO 6
 /**
